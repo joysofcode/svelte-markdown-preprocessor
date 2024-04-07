@@ -1,6 +1,6 @@
 <script>
   import Counter from "./counter.svelte";
-	let 🔥 = 'Heading'
+	let 🔥 = 'Counter'
 </script>
 
 # {🔥}

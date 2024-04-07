@@ -1,17 +1,17 @@
-import rehypeStringify from 'rehype-stringify'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
 import { parse } from 'svelte/compiler'
 import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
 
 async function markdownToHtml(string) {
 	return (
 		unified()
 			// turn Markdown into mdast
 			.use(remarkParse)
-			// turn mdast (Markdown) into hast (HTML)
+			// turn Markdown (mdast) into HTML (hast)
 			.use(remarkRehype, { allowDangerousHtml: true })
-			// turn hast (HTML) into HTML string to render
+			// turn HTML (hast) into HTML string
 			.use(rehypeStringify, { allowDangerousHtml: true })
 			.process(string)
 	)

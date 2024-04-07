@@ -1,5 +1,5 @@
 {
-	"name": "svelte-preprocessor",
+	"name": "svelte-preprocessors",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
